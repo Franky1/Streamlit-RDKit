@@ -1,36 +1,33 @@
 <!-- markdownlint-disable MD026 -->
-# Streamlit Template Project
+# Streamlit RDKit :test_tube:
 
 [![Streamlit](https://img.shields.io/badge/Go%20To-Streamlit%20Cloud-red?logo=streamlit)](https://streamlit.io/)
 
-Streamlit template project for new streamlit projects.
-
-## :point_right: *How to use this template project see in the [Usage.md](Usage.md) file* :point_left:
+![RDKit](assets/images/rdkit.png)
 
 ## Description :pencil2:
 
-> Describe your streamlit project here.
+This app is only a simple example project to test **RDKit** with Streamlit.
 
 ## Status :heavy_check_mark:
 
-> Last changed: 2023-11-11
+> Last changed: 2023-12-04
 
 ## Issues :bug:
 
-> Describe known issues here.
+- 3D View not working
 
 ## ToDo :ballot_box_with_check:
 
-> Describe open ToDo's here.
-
-## Ideas :bulb:
-
-> Describe ideas for future development here.
-
-## Links :link:
-
-> Describe useful links here.
+- [ ] Get 3D view working
 
 ## Resources :books:
 
-> Describe useful resources here.
+- RDKit
+  - <https://www.rdkit.org/>
+  - <https://github.com/rdkit/rdkit>
+- Streamlit and RDKit
+  - <https://github.com/napoles-uach/Medium_Mol>
+  - <https://github.com/napoles-uach/stmol>
+  - <https://3dmol.org/>
+  - <https://github.com/3dmol/3Dmol.js>

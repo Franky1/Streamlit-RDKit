@@ -25,24 +25,21 @@ WORKDIR /app
 
 # if we have a packages.txt, install it here, uncomment the two lines below
 # be aware that packages.txt must have LF endings only!
-# COPY packages.txt packages.txt
-# RUN xargs -a packages.txt apt-get install --yes
+COPY packages.txt packages.txt
+RUN xargs -a packages.txt apt-get install --yes
 
 COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
 EXPOSE 8501
-
-HEALTHCHECK --interval=1m --timeout=10s \
-    CMD curl --fail http://localhost:8501/_stcore/health
 
 COPY . .
 
 CMD ["streamlit", "run", "streamlit_app.py"]
 
 # Some docker commands see below:
-# docker build --progress=plain --tag streamlit:latest .
-# docker run -ti -p 8501:8501 --rm streamlit:latest /bin/bash
-# docker run -ti -p 8501:8501 --rm streamlit:latest
-# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit:latest
-# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit:latest /bin/bash
+# docker build --progress=plain --tag streamlit-rdkit:latest .
+# docker run -ti -p 8501:8501 --rm streamlit-rdkit:latest /bin/bash
+# docker run -ti -p 8501:8501 --rm streamlit-rdkit:latest
+# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit-rdkit:latest
+# docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit-rdkit:latest /bin/bash
